@@ -187,10 +187,24 @@ class ProductController extends Controller
 
         $total_price = 0;
 
+        foreach ($cartItems as $cartItem) {
+
+            $product=Product::where('products.id',$cartItem->product_id)->first();
+
+            if($cartItem->quantity>$product->quantity){
+
+                return response()->json(['message' => 'One or more quantity not available'], 400);
+
+            }
+        }
         // Calculate total price
         foreach ($cartItems as $cartItem) {
-            //$product=Product::where('id',$cartItem['product_id'])->get();
-            $total_price += $cartItem->product->price * $cartItem->quantity; 
+
+            $product=Product::where('products.id',$cartItem->product_id)->first();
+
+            $total_price += $cartItem->product->price * $cartItem->quantity;
+            $product->quantity-=$cartItem->quantity;
+            $product->save(); 
         }
 
         // Create the order
@@ -218,7 +232,7 @@ class ProductController extends Controller
         ->get();
 
         // Optionally, clear the cart after order creation
-        //CartItem::whereIn('id', $data['cart_item_id'])->delete();
+        CartItem::whereIn('id', $data['cart_item_id'])->delete();
 
         return response()->json([
             'message' => 'Order created successfully',
