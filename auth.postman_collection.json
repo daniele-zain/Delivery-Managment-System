@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "647ff2ef-2750-49ae-830a-c00df03c5190",
+		"_postman_id": "98f0b25a-e0fc-4604-bde6-9e336de71a3c",
 		"name": "auth",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "30932320"
+		"_exporter_id": "24685978"
 	},
 	"item": [
 		{
@@ -22,42 +22,42 @@
 					"formdata": [
 						{
 							"key": "first_name",
-							"value": "kjhkhj",
+							"value": "dan",
 							"type": "text"
 						},
 						{
 							"key": "last_name",
-							"value": "jkkjjk",
+							"value": "w",
 							"type": "text"
 						},
 						{
 							"key": "email",
-							"value": "jkkjk@gmail.com",
+							"value": "dan@gmail.com",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "hhhh",
+							"value": "1234",
 							"type": "text"
 						},
 						{
 							"key": "password_confirmation",
-							"value": "hhhh",
+							"value": "1234",
 							"type": "text"
 						},
 						{
 							"key": "phone",
-							"value": "989899900",
+							"value": "0954170196",
 							"type": "text"
 						},
 						{
 							"key": "image_url",
 							"type": "file",
-							"src": "postman-cloud:///1ef5736a-df17-4df0-98c5-7f6d74747df5"
+							"src": "/C:/Users/HP/Pictures/Screenshots/Screenshot (117).png"
 						},
 						{
 							"key": "address",
-							"value": "jj hjhj kk",
+							"value": "there",
 							"type": "text"
 						}
 					]

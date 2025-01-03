@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "6540755d-1472-4565-8810-02bd506b4020",
+		"_postman_id": "62e8fa92-a5e9-4f24-839c-03808ff8a294",
 		"name": "product",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
-		"_exporter_id": "30932320"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24685978"
 	},
 	"item": [
 		{
@@ -11,7 +11,21 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://127.0.0.1:8000/api/show_markets"
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/show_markets",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"show_markets"
+					]
+				}
 			},
 			"response": []
 		},
@@ -31,12 +45,26 @@
 					"formdata": [
 						{
 							"key": "market_id",
-							"value": "3",
+							"value": "2",
 							"type": "text"
 						}
 					]
 				},
-				"url": "http://127.0.0.1:8000/api/show_products_in_market"
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/show_products_in_market",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"show_products_in_market"
+					]
+				}
 			},
 			"response": []
 		},
@@ -56,12 +84,26 @@
 					"formdata": [
 						{
 							"key": "product_id",
-							"value": "5",
+							"value": "1",
 							"type": "text"
 						}
 					]
 				},
-				"url": "http://127.0.0.1:8000/api/show_product_detaild"
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/show_product_detaild",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"show_product_detaild"
+					]
+				}
 			},
 			"response": []
 		},
@@ -70,9 +112,13 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": {
-						"token": "1|lnrNaLIOYpLfGGoin5erAyepbsCogZaH5SgBwEyN84812d54"
-					}
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|06vRABh7KSyYmYYkLJjUgddmJsCP4cFMePaKPpNi540a20a4",
+							"type": "string"
+						}
+					]
 				},
 				"method": "POST",
 				"header": [
@@ -87,28 +133,49 @@
 					"formdata": [
 						{
 							"key": "product_id",
-							"value": "3",
+							"value": "1",
 							"type": "text"
 						},
 						{
 							"key": "quantity",
-							"value": "88",
+							"value": "40",
 							"type": "text"
 						}
 					]
 				},
-				"url": "http://127.0.0.1:8000/api/add_to_cart"
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/add_to_cart",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"add_to_cart"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "show_cart",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": {
-						"token": "1|WfAn7MXxkDl8aIFgraDQSxeYiPk0zgGPK4Ryup2Ue51069d7"
-					}
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|06vRABh7KSyYmYYkLJjUgddmJsCP4cFMePaKPpNi540a20a4",
+							"type": "string"
+						}
+					]
 				},
 				"method": "GET",
 				"header": [
@@ -118,7 +185,30 @@
 						"type": "text"
 					}
 				],
-				"url": "http://127.0.0.1:8000/api/show_cart"
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/show_cart",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"show_cart"
+					]
+				}
 			},
 			"response": []
 		},
@@ -127,9 +217,13 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": {
-						"token": "1|lnrNaLIOYpLfGGoin5erAyepbsCogZaH5SgBwEyN84812d54"
-					}
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|06vRABh7KSyYmYYkLJjUgddmJsCP4cFMePaKPpNi540a20a4",
+							"type": "string"
+						}
+					]
 				},
 				"method": "POST",
 				"header": [
@@ -140,22 +234,467 @@
 					}
 				],
 				"body": {
-					"mode": "formdata",
-					"formdata": [
+					"mode": "raw",
+					"raw": "{\r\n    \"cart_item_id\": [3],\r\n    \"address\": \"era\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/create_order",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create_order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
 						{
-							"key": "cart_item_id[1]\t",
-							"value": "2",
-							"type": "text",
-							"disabled": true
-						},
+							"key": "token",
+							"value": "1|06vRABh7KSyYmYYkLJjUgddmJsCP4cFMePaKPpNi540a20a4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
 						{
-							"key": "cart_item_id[2]\t",
-							"value": "1",
+							"key": "query",
+							"value": "rk",
 							"type": "text"
 						}
 					]
 				},
-				"url": "http://127.0.0.1:8000/api/create_order"
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/search",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|06vRABh7KSyYmYYkLJjUgddmJsCP4cFMePaKPpNi540a20a4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/show_order/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"show_order",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show all orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|06vRABh7KSyYmYYkLJjUgddmJsCP4cFMePaKPpNi540a20a4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/show_all_orders",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"show_all_orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|06vRABh7KSyYmYYkLJjUgddmJsCP4cFMePaKPpNi540a20a4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|06vRABh7KSyYmYYkLJjUgddmJsCP4cFMePaKPpNi540a20a4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "address",
+							"value": "era",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add to favorite",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|06vRABh7KSyYmYYkLJjUgddmJsCP4cFMePaKPpNi540a20a4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/favorites/add/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"favorites",
+						"add",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove from favorite",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|06vRABh7KSyYmYYkLJjUgddmJsCP4cFMePaKPpNi540a20a4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/favorites/remove/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"favorites",
+						"remove",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show favorites",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|06vRABh7KSyYmYYkLJjUgddmJsCP4cFMePaKPpNi540a20a4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/favorites",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"favorites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit an order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|06vRABh7KSyYmYYkLJjUgddmJsCP4cFMePaKPpNi540a20a4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "address",
+							"value": "berlin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/order/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete an order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|06vRABh7KSyYmYYkLJjUgddmJsCP4cFMePaKPpNi540a20a4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "address",
+							"value": "berlin",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/order/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order",
+						"1"
+					]
+				}
 			},
 			"response": []
 		}
