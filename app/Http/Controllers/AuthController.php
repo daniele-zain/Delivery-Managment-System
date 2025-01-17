@@ -26,7 +26,7 @@ class AuthController extends Controller
         if ($validator->fails()) {
             $errorMessages = $validator->errors()->all(); // Get all error messages as an array
             $errorText = implode(", ", $errorMessages); // Join the error messages into a single string
-        
+
             return response()->json([
                 "message" => $errorText, // Return the errors as a single string
             ], 400);
@@ -58,7 +58,7 @@ class AuthController extends Controller
             'token' => $token
         ];
 
-        
+
         return response()->json($response,201);
     }
 
@@ -69,12 +69,12 @@ class AuthController extends Controller
             'email' => 'required|string',
             'password' => 'required|string'
         ]);
-        
+
 
         if ($validator->fails()) {
             $errorMessages = $validator->errors()->all(); // Get all error messages as an array
             $errorText = implode(", ", $errorMessages); // Join the error messages into a single string
-        
+
             return response()->json([
                 "message" => $errorText, // Return the errors as a single string
             ], 400);
@@ -92,12 +92,12 @@ class AuthController extends Controller
         }
         $token = $user->createToken('myapptoken')->plainTextToken;
 
-        
+
         $response = [
             'user' => $user,
             'token' => $token
-        ]; 
-        
+        ];
+
         return response($response , 201);
     }
 

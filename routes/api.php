@@ -45,5 +45,19 @@ Route::group(["middleware" => "auth:sanctum"], function () {
     Route::get('/show_cart', [ProductController::class, 'show_cart']);
     Route::post('/create_order', [ProductController::class, 'create_order']);
 
+    Route::post('/search', [ProductController::class, 'search']);
+    Route::get('/show_order/{order_id}', [ProductController::class, 'show_order']);
+    Route::get('/show_all_orders', [ProductController::class, 'show_all_orders']);
+
+    Route::get('/profile', [ProductController::class, 'show_profile']);
+    Route::put('/profile', [ProductController::class, 'edit_profile']);
+
+    Route::post('/favorites/add/{product_id}', [ProductController::class, 'addToFavorites']);
+    Route::delete('/favorites/remove/{product_id}', [ProductController::class, 'removeFromFavorites']);
+    Route::get('/favorites', [ProductController::class, 'getFavorites']);
+
+    Route::put('/order/{order_id}', [ProductController::class, 'edit_order']);
+    Route::delete('/order/{order_id}', [ProductController::class, 'delete_order']);
+
 
 });
