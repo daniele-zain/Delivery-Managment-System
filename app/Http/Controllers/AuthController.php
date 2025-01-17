@@ -19,7 +19,7 @@ class AuthController extends Controller
             'email'=> 'required|string|unique:Users,email',
             'password'=> 'required|string|confirmed',
             'phone'=>'string|required|unique:Users,phone',
-            'image_url'=> 'required|image|max:2048',
+            'image_url'=> 'image|max:2048',
             'address'=>'required|string',
         ]);
 
@@ -32,6 +32,8 @@ class AuthController extends Controller
             ], 400);
         }
 
+        $photoUrl=null;
+        
         if ($request->hasFile('image_url')) {
             $photo_subject_path = $request->file('image_url')->store('images', 'public');
             $photoUrl = asset('storage/' . $photo_subject_path);
