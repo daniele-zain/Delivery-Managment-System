@@ -48,7 +48,12 @@ DB_DATABASE=""
 
 DB_USERNAME=""
 
-DB_PASSWORD="
+DB_PASSWORD=""
+
+### Generate application key
+```bash
+php artisan key:generate
+```
 
 ### Run database migrations
 ```bash
