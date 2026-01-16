@@ -33,3 +33,28 @@ This project emphasizes clean backend architecture, proper separation of concern
 ### Clone the repository
 ```bash
 git clone https://github.com/daniele-zain/Delivery-Management-System.git
+```
+### Install dependencies
+```bash
+composer install
+```
+### Environment configuration
+```bash
+cp .env.example .env
+```
+Update the database credentials in the .env file:
+
+DB_DATABASE=your_database
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+
+### Run database migrations
+```bash
+php artisan migrate
+```
+
+### Start the development server
+```bash
+php artisan serve
+```
+
