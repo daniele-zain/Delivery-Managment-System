@@ -25,3 +25,25 @@ This project focuses on backend development best practices, RESTful API design, 
 - **ORM:** Eloquent
 - **API Style:** RESTful APIs
 - **Tools:** Composer, Artisan
+
+## ⚙️ Installation & Setup
+
+### Clone the repository
+in Bash
+git clone https://github.com/daniele-zain/Delivery-Management-System.git
+
+### Install dependencies
+composer install
+
+### Configure database
+
+Update your .env file with database credentials:
+DB_DATABASE=your_database
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+
+### Run migrations
+php artisan migrate
+
+### Start the server
+php artisan serve
