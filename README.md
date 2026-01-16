@@ -1,49 +1,64 @@
-# 📦 Delivery Management System (Backend)
+📦 Delivery Management System (Backend)
+📝 Project Overview
 
-## 📝 Project Overview
-The **Delivery Management System** is a backend web application built using **Laravel**.  
-It provides full **CRUD (Create, Read, Update, Delete)** functionality to manage delivery operations efficiently.
+The Delivery Management System is a backend application developed using Laravel, designed to manage and organize delivery operations in a structured, scalable, and maintainable manner.
+The system implements full CRUD (Create, Read, Update, Delete) functionality, enabling efficient handling of delivery data through well-structured RESTful APIs.
 
-This project focuses on backend development best practices, RESTful API design, and database management using Laravel and Eloquent ORM.
+This project emphasizes clean backend architecture, proper separation of concerns, and robust database interaction using Laravel’s MVC pattern and Eloquent ORM.
 
----
+🚀 Features
 
-## 🚀 Features
-- Full CRUD operations for deliveries
-- Manage delivery status (e.g. pending, in-progress, delivered)
-- RESTful API endpoints
-- Request validation and error handling
-- Database relationships using Eloquent ORM
-- Clean MVC architecture
+Complete CRUD operations for delivery management
 
----
+Delivery status handling (e.g. pending, in progress, delivered)
 
-## 🛠️ Tech Stack
-- **Backend:** Laravel
-- **Language:** PHP
-- **Database:** MySQL
-- **ORM:** Eloquent
-- **API Style:** RESTful APIs
-- **Tools:** Composer, Artisan
+RESTful API design following industry best practices
 
-## ⚙️ Installation & Setup
+Server-side request validation and centralized error handling
 
-### Clone the repository
-in Bash
+Relational database modeling using Eloquent ORM
+
+Clean and maintainable MVC architecture
+
+🛠️ Tech Stack
+
+Backend Framework: Laravel
+
+Programming Language: PHP
+
+Database: MySQL
+
+ORM: Eloquent
+
+API Architecture: RESTful APIs
+
+Development Tools: Composer, Artisan
+
+⚙️ Installation & Setup
+Clone the repository
 git clone https://github.com/daniele-zain/Delivery-Management-System.git
 
-### Install dependencies
+Install dependencies
 composer install
 
-### Configure database
+Environment configuration
 
-Update your .env file with database credentials:
+Create and configure the environment file:
+
+cp .env.example .env
+
+
+Update the database credentials in the .env file:
+
 DB_DATABASE=your_database
 DB_USERNAME=your_username
 DB_PASSWORD=your_password
 
-### Run migrations
+Generate application key
+php artisan key:generate
+
+Run database migrations
 php artisan migrate
 
-### Start the server
+Start the development server
 php artisan serve
